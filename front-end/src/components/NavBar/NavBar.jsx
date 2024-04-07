@@ -3,13 +3,14 @@ import "./NavBar.css";
 import { GoSignOut } from "react-icons/go";
 import { Link, useLocation } from "react-router-dom";
 import unknown from "../../assets/unknown-user.png";
+import { useAuth } from "../../Hooks/useAuthContext";
 
-function NavBar(user) {
-  console.log(user.userdata.firstName);
+function NavBar() {
   const location = useLocation();
   const [activePage, setActivePage] = useState("");
   const [isActiveHamburger, setisActiveHamburger] = useState(false);
 
+  const { currentUser } = useAuth();
   //generate handle function
   const handleHamburger = () => {
     setisActiveHamburger(!isActiveHamburger);
@@ -44,10 +45,10 @@ function NavBar(user) {
               {/* name et Family name java elements */}
               {/* <span>iyed </span> <span>grassi </span> */}
               <span>
-                {user.userdata.firstName} {user.userdata.lastName}
+                {currentUser.firstName} {currentUser.lastName}
               </span>
             </span>
-            <span className="secondaryText desc">{user.userdata.email} </span>
+            <span className="secondaryText desc">{currentUser.email} </span>
           </div>
         </div>
 

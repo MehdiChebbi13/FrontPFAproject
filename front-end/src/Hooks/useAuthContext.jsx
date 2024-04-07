@@ -5,7 +5,12 @@ const AuthContext = createContext();
 export const useAuth = () => useContext(AuthContext);
 
 export const AuthProvider = ({ children }) => {
-  const [currentUser, setCurrentUser] = useState(null);
+  const [currentUser, setCurrentUser] = useState({
+    id: null,
+    firstname: "",
+    lastname: "",
+    email: "",
+  });
 
   useEffect(() => {
     // Check if currentUser is already stored in localStorage

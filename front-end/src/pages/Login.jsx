@@ -55,8 +55,14 @@ const Login = () => {
         email,
         password,
       });
-      console.log(data.user._id);
-      loginUser(data.user._id);
+      const data_user = {
+        _id: data.user._id,
+        firstName: data.user.firstName,
+        lastName: data.user.lastName,
+        email: data.user.email,
+      };
+      console.log(data_user);
+      loginUser(data_user);
       navigate("/home");
     } catch (error) {
       setErrorMessage("Failed to log in. Please check your credentials.");

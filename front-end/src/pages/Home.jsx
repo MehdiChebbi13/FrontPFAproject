@@ -9,7 +9,7 @@ import Header from "../components/Header/Header";
 import NavBar from "../components/NavBar/NavBar";
 import Rapport from "../components/RapportTable/Rapport";
 import TaskCard from "../components/TaskCard/TaskCard";
-import { useAuth } from "../Hooks/useAuthContext";
+
 function Home() {
   const [addTask, setAddTask] = useState(false);
   const [editReport, setEditReport] = useState(false);
@@ -20,22 +20,6 @@ function Home() {
   const [taskToEdit, setTaskToEdit] = useState(null);
   const [task, setTask] = useState(null);
   const [taskCard, setTaskCard] = useState(false);
-  const { currentUser } = useAuth();
-  const [userdata, setUserData] = useState({});
-  useEffect(() => {
-    const fetchUserData = async () => {
-      try {
-        const response = await axios.get(
-          `http://localhost:3001/profile/${currentUser}`
-        );
-        setUserData(response.data);
-      } catch (error) {
-        console.error("Error fetching user data:", error);
-      }
-    };
-
-    fetchUserData(); // Call the fetchUserData function
-  }, [currentUser]); 
 
   return (
     <>
@@ -70,7 +54,7 @@ function Home() {
         <Header />
         <div className="center">
           <div className="the-nav">
-            <NavBar userdata={userdata} />
+            <NavBar />
           </div>
           <Rapport
             addTask={addTask}
@@ -84,7 +68,6 @@ function Home() {
             setTaskToEdit={setTaskToEdit}
             setTask={setTask}
             setTaskCard={setTaskCard}
-            userdata={userdata}
           />
         </div>
         {addTask && <div className="All-b"></div>}

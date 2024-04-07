@@ -29,7 +29,7 @@ const AddTasks = ({
         if (!currentUser) return;
 
         const response = await axios.get(
-          `http://localhost:3001/home/getproject?userId=${currentUser}`
+          `http://localhost:3001/home/getproject?userId=${currentUser._id}`
         );
         setProject(response.data);
         // Set default project name if project list is not empty

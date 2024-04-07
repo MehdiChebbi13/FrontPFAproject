@@ -32,13 +32,13 @@ function AppRoutes() {
       <Route path="/Profile" element={<Profile_Page />} />
       <Route
         path="/auth/login"
-        element={!currentUser ? <Login /> : <Navigate to="/home" />}
-        // element={<Login />}
+        // element={!currentUser ? <Login /> : <Navigate to="/home" />}
+        element={<Login />}
       />
       <Route
         path="/auth/register"
-        element={!currentUser ? <SignUp /> : <Navigate to="/home" />}
-        // element={<SignUp />}
+        // element={!currentUser ? <SignUp /> : <Navigate to="/home" />}
+        element={<SignUp />}
       />
     </Routes>
   );

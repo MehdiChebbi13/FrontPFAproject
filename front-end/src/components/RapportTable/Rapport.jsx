@@ -19,11 +19,10 @@ function Rapport({
   setEditTask,
   setTask,
   setTaskCard,
-  userdata,
 }) {
   // Retrieve currentUser from AuthContext
   const { currentUser } = useAuth();
-
+  console.log(currentUser);
   // State variables initialization
   const [clickedTask, setClickedTask] = useState(false);
   const [rapportArray, setRapportState] = useState([]);
@@ -44,10 +43,9 @@ function Rapport({
   // Function to handle adding a report
   const handleAddReport = async () => {
     try {
-      console.log(currentUser);
       await axios.post("http://localhost:3001/home", {
         name: rapport_nom,
-        userId: currentUser, // Pass userId to the server
+        userId: currentUser._id, // Pass userId to the server
       });
 
       // Display success message using SweetAlert
@@ -62,7 +60,6 @@ function Rapport({
 
   // ! Function to handle selecting a report
   const handleTaskRapport = (rap) => {
-    console.log(rap);
     setRapportId(rap._id);
     getRapportId(rap._id);
     setRapportNom(rap.nom);
@@ -86,7 +83,7 @@ function Rapport({
     if (result.isConfirmed) {
       try {
         const response = await axios.delete(
-          `http://localhost:3001/home/deleterapport/${rapportId}?userId=${currentUser}`
+          `http://localhost:3001/home/deleterapport/${rapportId}?userId=${currentUser._id}`
         );
 
         // Handle success response from the server
@@ -152,6 +149,7 @@ function Rapport({
   // Effect to load data from local storage
   useEffect(() => {
     const storedData = localStorage.getItem("rapportArray");
+
     if (storedData) {
       setRapportState(JSON.parse(storedData));
     }
@@ -159,7 +157,7 @@ function Rapport({
 
   // Effect to fetch data from the server
   useEffect(() => {
-    const userId = currentUser;
+    const userId = currentUser._id;
 
     if (userId) {
       axios
@@ -184,7 +182,9 @@ function Rapport({
     <>
       {!clickedTask ? (
         <div className="rap-wrapperTable">
-          <div className="rapport-desc">Bienvenue Mr {userdata.lastName}</div>
+          <div className="rapport-desc">
+            Bienvenue Mr {currentUser.lastName}
+          </div>
           <div className="rap-table-head">
             <div className="rap-search">
               <div className="description1">Rapport</div>
