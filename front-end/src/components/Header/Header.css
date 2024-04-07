@@ -1,0 +1,111 @@
+/* .h-wrapper {
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.icon-container {
+  font-size: 30px;
+  color: white;
+}
+.icon-container > :nth-child(1) {
+  margin-right: 7px;
+}
+
+.Logo {
+  font-size: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: white;
+} */
+ /* nour */
+
+ .h-wrapper{
+  justify-content: space-between;
+  align-items:baseline;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 10px;
+  
+ 
+
+}
+.icon-container{
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}   
+.icon-container>:nth-child(1){
+  margin-right: 7px;
+   
+}
+.icon-container>:nth-child(1):hover{
+  scale: 1.2;
+}
+.icon-container>:nth-child(2):hover{
+  scale: 1.2;
+}
+/*  */
+
+
+
+/* the notfication card */
+
+ 
+.notification-box{
+  position: absolute;
+  top: 3.5rem;
+  right: 3rem;
+  border-radius: 5px;
+  color: black;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 20px auto;
+  z-index: 100;
+
+ 
+}
+.notification{
+  
+  height: 14rem;
+  width: 14rem;
+  background-color: hsla(0, 0%, 100%);
+  transition-property: transform,opacity,height;
+  transition-duration: 0.35s ;
+  transition-timing-function: linear;
+  border-radius: 5px;
+}
+.active {
+ 
+  transform: translateY(0);
+  
+}
+.inactive{
+  opacity: 0;
+  transform: translateY(-10px);
+  height: 4rem;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  border: none;
+  width: 7rem;
+  position: relative;
+  
+  
+}
+.icon1:hover {
+  color: gray;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.icon2:hover {
+  color: gray;
+  opacity: 0.8;
+  cursor: pointer;
+}

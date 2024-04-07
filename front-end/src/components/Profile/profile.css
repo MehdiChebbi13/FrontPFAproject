@@ -1,0 +1,68 @@
+.profile {
+  overflow: hidden;
+  display: flex;
+  border: 2px solid transparent;
+  justify-content: space-around;
+   width: 90%;
+   margin-top: 2rem;
+    
+}
+.scrollable{
+  overflow: auto;
+  height: clamp(450px, 93vh, 1000px);
+   width: 80%;
+  margin-bottom: 2rem;
+  
+}
+.settings {
+  /* display: flex;
+  flex-direction: column;
+  width: 10rem;
+  color: rgb(62, 70, 118);
+  background: white;
+  line-height: 3.75rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  height:clamp(20rem, 20%, 30rem); */
+}
+
+.settings{
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  border: 5px solid white;
+  line-height: 3.75rem;
+  text-align: center;
+  border-radius: .5rem;
+  color: rgb(62, 70, 118);
+  background: white;
+  height: clamp(20rem, 40vh, 50%);
+  justify-content: center;
+  width: 11rem;
+}
+
+.br {
+  color: black;
+}
+
+.list-settings {
+  cursor: pointer;
+}
+
+@media screen and (max-width:1060px){
+  .settings{
+    display: none;
+  }
+}
+
+@media (max-width: 508px) {
+  .profile {
+   
+    display: block;
+    width: 100%;
+    margin-right:2rem ;
+  }
+  .scrollable{
+    width: 100%;
+  }
+}

@@ -1,0 +1,258 @@
+.rap-table {
+  overflow-y: auto;
+  height: 60%;
+  background-color: white;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.description1 {
+  position: absolute;
+  text-align: left;
+  right: 290%;
+  font-size: 1.8rem;
+}
+
+.rap-tableaux-rapport {
+  background-color: #e8e8e8;
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto; /* Add this line */
+}
+
+.rap-tableaux-rapport td:first-child {
+  width: 50%; /* Make the first column take up half the table */
+}
+
+.rap-tableaux-rapport td:nth-child(2),
+.rap-tableaux-rapport td:nth-child(3) {
+  width: 25%; /* Make the second and third columns each take up a quarter of the table */
+}
+.rap-wrapperTable {
+  position: relative;
+  margin: 0rem auto;
+  width: 1250px;
+  margin-bottom: 5rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+.rap-table::-webkit-scrollbar {
+  display: none;
+}
+.rap-tableaux-rapport .rap-button-container {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: center;
+  height: 100%; /* Occupy full height of the table cell */
+}
+.rap-tableaux-rapport .rap-button {
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  --background: #00a36d;
+  z-index: 1;
+  position: relative;
+  background: var(--background);
+  cursor: pointer;
+  transition: all 0rap-2s;
+  font-size: 17px;
+  padding: 0rap-1rem 1rem;
+  border-radius: 50px;
+  opacity: 0rap-8;
+}
+
+.rap-tableaux-rapport .rap-elhead {
+  position: relative;
+  position: sticky;
+  top: 0rem;
+  background-color: var(--blue);
+
+  color: white;
+  z-index: 2;
+  opacity: 1;
+  text-align: center;
+  height: 4rem;
+
+  /* opacity: 0.rap-8; */
+
+  /* color: #d8b339; */
+}
+.rap-elhead th {
+  border: 2px solid white;
+}
+.rap-tableaux-rapport td,
+button {
+  border: 1px solid #ddd;
+  height: 2rap-5rem;
+  width: 6rap-5rem;
+  cursor: pointer;
+}
+.rap-tableaux-rapport td {
+  color: #3e4676;
+  z-index: -1;
+  height: 80px;
+  padding: 0 10px;
+}
+.rap-tableaux-rapport td {
+  border: 2px solid white;
+  text-align: center;
+}
+
+.rap-tableaux-rapport tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.rap-tableaux-rapport .rap-report-row:hover {
+  background-color: #ddd;
+}
+
+.rap-table-head {
+  background-color: white;
+  height: 4rem;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.rap-search-input {
+  background-color: var(#e8e8e8);
+  border-radius: 1rem;
+  width: 300px;
+  height: 40px;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  margin-top: 0.2rem;
+  opacity: 0.7;
+}
+
+/* .ajoutstyle {
+  position: absolute;
+  top: 2.6rem;
+  right: 0;
+  font-size: 20rem;
+  z-index: 500;
+  background-color: gray;
+  padding: 0.5rem;
+  color: white;
+  border-radius: 10px;
+} */
+
+.rap-search {
+  position: relative;
+  left: 2.5rem;
+  width: 25rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.rap-right-m > svg {
+  opacity: 0rap-7;
+}
+.rap-right-m > svg:hover {
+  opacity: 1;
+}
+
+.rap-left {
+  position: relative;
+  text-align: left;
+  left: 1rem;
+  font-size: 1rap-6rem;
+}
+.rap-rapport-desc {
+  color: white;
+  font-size: 2rem;
+  padding: 0rap-3rem 0rap-5rem;
+}
+
+.disabled {
+  display: none;
+}
+.rap-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rap-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3e4676 !important;
+  color: white !important;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+.add-button:hover {
+  background-color: #5965a8 !important;
+}
+.cancel-button {
+  background-color: rgb(163, 158, 158) !important;
+}
+.btn-edit {
+  display: flex;
+  position: relative;
+}
+.edit-icon {
+  position: absolute;
+  right: 25px;
+}
+
+.edit-icon > span {
+  font-size: 1.75rem;
+  color: gray;
+  opacity: 0.7;
+}
+.edit-icon > span:hover {
+  color: #3e4676;
+  opacity: 1;
+}
+.options-list {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #5965a8;
+  padding: 8px 10px;
+  border-radius: 5px;
+  top: 1.8rem;
+  right: -0.5rem;
+  z-index: 500;
+}
+
+.options-list button {
+  display: block;
+  background: none;
+  border: none;
+  padding: 7px auto;
+  margin: 2px 0;
+  text-align: center;
+  color: #3e4676;
+}
+
+.options-list button:hover {
+  background-color: #ececec;
+}
+
+.input-nom-rapport {
+  width: 70%;
+  height: 2.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  text-align: center;
+}
+
+.input-nom-rapport:focus {
+  outline: none;
+}
+
+.table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #e8e8e8;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}

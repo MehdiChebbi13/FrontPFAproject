@@ -1,0 +1,377 @@
+.account {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  row-gap: 1.25rem;
+}
+
+.first-div {
+  display: flex;
+  justify-content: space-around;
+  background: white;
+
+  height: clamp(20rem, 20vw, 30rem);
+  border-radius: 0.5rem;
+  min-width: 390px;
+
+  /*display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: white;
+  min-width: 390px;
+  height: clamp(640px, 40vh, 700px);
+  border-radius: 0.5rem;*/
+}
+
+.left-first-div {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+
+  color: rgb(62, 70, 118);
+  /* line-height: 3rem; */
+}
+
+.public-info {
+  font-size: 1rem;
+  line-height: 4rem;
+}
+
+.info-u {
+  display: flex;
+  flex-direction: column;
+  line-height: 2rem;
+}
+
+.username {
+  width: clamp(10rem, 40vw, 475px);
+  height: 36px;
+  border: 1px solid rgb(222, 226, 230);
+  border-radius: 3.2px;
+}
+
+.info-b {
+  display: flex;
+  flex-direction: column;
+  line-height: 2rem;
+}
+
+.biography {
+  width: clamp(12.5rem, 40vw, 475px);
+  height: 45px;
+  border: 1px solid rgb(222, 226, 230);
+  border-radius: 3.2px;
+}
+
+.save-changes {
+  background-color: hsl(216, 70%, 55%, 0.87);
+  appearance: button;
+  border: 1px solid rgb(79, 138, 224);
+  border-radius: 3.2px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-weight: 400;
+  height: 35px;
+  margin-top: 1rem;
+
+  width: clamp(100px, 15vw, 150px);
+  font-size: 15px;
+}
+
+.save-changes:hover {
+  background-color: hsl(216, 70%, 55%, 1);
+  transition: 500ms;
+}
+
+.right-account {
+  display: flex;
+  flex-direction: column;
+}
+
+.icons {
+  position: absolute;
+
+  right: 0;
+  top: 2.2rem;
+}
+
+.right-first-div > img {
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+}
+.right-first-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-btn {
+  margin-top: 1rem;
+  border: 1px solid rgb(79, 138, 224);
+  border-radius: 3.2px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-weight: 400;
+  height: 35px;
+
+  font-size: 15px;
+  background-color: hsl(216, 70%, 55%, 0.87);
+  appearance: button;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s ease-out width;
+  width: clamp(100px, 15vw, 150px);
+}
+
+.upload-btn:hover {
+  background-color: hsl(216, 70%, 55%, 1);
+  transition: 500ms;
+}
+
+.second-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: white;
+  min-width: 390px;
+  height: clamp(420px, 40vh, 700px);
+  border-radius: 0.5rem;
+}
+
+.left-second-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(62, 70, 118);
+}
+
+.Private-info {
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  line-height: 4rem;
+}
+
+.right-heading {
+  margin-top: 2.5%;
+  margin-right: 0.5rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5rem;
+  line-height: 3rem;
+  margin-right: 1rem;
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(62, 70, 118);
+  line-height: 1rem;
+}
+
+.last-name {
+}
+
+.inputs-names {
+  display: flex;
+  gap: 1rem;
+}
+.inputs-names input {
+  transition: 0.5s ease-in width;
+  width: clamp(10.5rem, 35vw, 330px);
+  cursor: auto;
+  height: 33px;
+  font-size: 15px;
+  font-weight: 400;
+  color: rgb(73, 80, 87);
+  background-color: rgb(255, 255, 255);
+  border-radius: 3.2px;
+  border: 1px solid rgb(222, 226, 230);
+
+  width: 100%;
+}
+.nomFam {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  color: rgb(62, 70, 118);
+
+  width: 100%;
+}
+.nomFam p {
+  width: 100%;
+  text-align: left;
+  margin: 0;
+}
+
+.e-mail {
+  margin-top: 1rem;
+
+  color: rgb(62, 70, 118);
+}
+
+.e-mail-input > input {
+  background-color: rgb(255, 255, 255);
+  border-radius: 3.2px;
+  border: 1px solid rgb(222, 226, 230);
+  color: rgb(73, 80, 87);
+  cursor: auto;
+  font-size: 15px;
+  font-weight: 400;
+  height: 33px;
+
+  width: 100%;
+}
+
+.second-row {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  line-height: 1rem;
+  color: rgb(62, 70, 118);
+}
+
+.second-row-labels {
+  display: flex;
+  justify-content: space-between;
+}
+
+.service-label {
+  margin-right: 19.7rem;
+}
+
+.second-row-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.second-row-inputs > :nth-child(1) {
+  background-color: rgb(255, 255, 255);
+  border-radius: 3.2px;
+  border: 1px solid rgb(222, 226, 230);
+  color: rgb(73, 80, 87);
+  cursor: auto;
+  font-size: 15px;
+  font-weight: 400;
+  height: 33px;
+
+  transition: 0.5s ease-in width;
+  width: clamp(10.5rem, 35vw, 385px);
+}
+
+.second-row-inputs > :nth-child(2) {
+  background-color: rgb(255, 255, 255);
+  border-radius: 3.2px;
+  border: 1px solid rgb(222, 226, 230);
+  color: rgb(73, 80, 87);
+  cursor: auto;
+  font-size: 15px;
+  font-weight: 400;
+  height: 33px;
+
+  transition: 0.5s ease-in width;
+  width: clamp(10.5rem, 35vw, 385px);
+}
+
+.CIN {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  /* line-height: 1rem; */
+  color: rgb(62, 70, 118);
+}
+
+.cin-input input {
+  background-color: rgb(255, 255, 255);
+  border-radius: 3.2px;
+  border: 1px solid rgb(222, 226, 230);
+  color: rgb(73, 80, 87);
+  cursor: auto;
+  font-size: 15px;
+  font-weight: 400;
+  height: 33px;
+
+  width: 100%;
+}
+
+.ville {
+  display: flex;
+  flex-direction: column;
+  /* line-height: 1rem; */
+  margin-top: 1rem;
+}
+
+.etablissement-info-labels {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(62, 70, 118);
+}
+
+.code-postal-label {
+  /*    
+   width: 51%;
+   text-align: left; */
+}
+
+.ville-info-inputs {
+  display: flex;
+
+  justify-content: flex-start;
+  gap: 1rem;
+}
+.etab,
+.codep {
+  display: flex;
+  flex-direction: column;
+  color: rgb(62, 70, 118);
+
+  width: 100%;
+}
+.etab input,
+.codep input {
+  transition: 0.5s ease-in-out width;
+  width: clamp(10rem, 30vw, 20rem);
+  background-color: rgb(255, 255, 255);
+  border-radius: 3.2px;
+  border: 1px solid rgb(222, 226, 230);
+  color: rgb(73, 80, 87);
+  cursor: auto;
+  font-size: 15px;
+  font-weight: 400;
+  height: 33px;
+  width: 100%;
+}
+
+.adresse {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+
+.adresse-label {
+  color: rgb(62, 70, 118);
+}
+
+.adresse input {
+  background-color: rgb(255, 255, 255);
+  border-radius: 3.2px;
+  border: 1px solid rgb(222, 226, 230);
+  color: rgb(73, 80, 87);
+  cursor: auto;
+  font-size: 15px;
+  font-weight: 400;
+  height: 33px;
+  width: 100%;
+}
